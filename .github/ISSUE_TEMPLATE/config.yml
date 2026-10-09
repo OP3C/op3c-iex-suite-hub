@@ -1,7 +1,7 @@
 blank_issues_enabled: false
 contact_links:
   - name: Security vulnerability
-    url: https://github.com/OP3C/op3c-iex-suite-issues/security/advisories/new
+    url: https://github.com/OP3C/op3c-iex-suite-hub/security/advisories/new
     about: Report a vulnerability privately. Never in a public issue.
   - name: Private support
     url: mailto:support@op3c.com

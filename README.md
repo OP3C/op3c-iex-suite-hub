@@ -1,9 +1,10 @@
-# OP3C Extension Suite: issue tracker
+# OP3C Extension Suite
 
-This repository is the public issue tracker for the **OP3C Extension Suite**, a set of commercial extensions for
+This repository is the public home of the **OP3C Extension Suite**, a set of commercial extensions for
 [Open Integration Engine](https://github.com/OpenIntegrationEngine/engine). It holds no source code.
 
-Use it to report a bug or to request a feature in one of the extensions:
+Today it hosts the suite's issue tracker. Use it to report a bug or to request a feature in one of the
+extensions:
 
 - Backup
 - DBCP Manager
