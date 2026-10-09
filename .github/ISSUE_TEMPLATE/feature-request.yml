@@ -1,0 +1,57 @@
+name: Feature request
+description: Something you would like an OP3C extension to do.
+labels: ["enhancement", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        > [!CAUTION]
+        > **This issue will be public.** Do not include patient data, message content, license keys, credentials or
+        > host names of your organization.
+
+  - type: dropdown
+    id: extension
+    attributes:
+      label: Extension
+      options:
+        - Backup
+        - DBCP Manager
+        - License Manager
+        - Lookup Tables
+        - Mask
+        - Prometheus
+        - Role-Based Access Control
+        - Several, or a new extension
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What are you trying to do
+      description: The task or the problem behind the request, in your own words.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: What you would like
+    validations:
+      required: true
+
+  - type: textarea
+    id: workaround
+    attributes:
+      label: How you handle it today
+      description: A workaround you use, or other tools you considered.
+
+  - type: checkboxes
+    id: confirmations
+    attributes:
+      label: Before you submit
+      options:
+        - label: This request contains no patient data, license keys, credentials or internal host names.
+          required: true
+        - label: I searched the existing issues and did not find this request.
+          required: true

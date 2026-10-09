@@ -1,0 +1,112 @@
+name: Bug report
+description: Something in an OP3C extension does not work as documented.
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        > [!CAUTION]
+        > **This issue will be public.** Do not include patient data, message content, license keys, passwords,
+        > tokens, connection strings or host names of your organization. Replace real values with made-up ones.
+        > If that is not possible, write to support@op3c.com instead.
+
+  - type: dropdown
+    id: extension
+    attributes:
+      label: Extension
+      options:
+        - Backup
+        - DBCP Manager
+        - License Manager
+        - Lookup Tables
+        - Mask
+        - Prometheus
+        - Role-Based Access Control
+        - Several, or not sure
+    validations:
+      required: true
+
+  - type: textarea
+    id: versions
+    attributes:
+      label: Installed versions
+      description: >-
+        In the Administrator, open the OP3C task pane, click About, then Copy, and paste the result here.
+      render: text
+    validations:
+      required: true
+
+  - type: input
+    id: engine
+    attributes:
+      label: Open Integration Engine version
+      placeholder: "4.6.0"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: database
+    attributes:
+      label: Engine database
+      options:
+        - PostgreSQL
+        - MySQL
+        - SQL Server
+        - Oracle
+        - Derby
+        - Other, or not sure
+    validations:
+      required: true
+
+  - type: input
+    id: environment
+    attributes:
+      label: Server operating system and Java version
+      placeholder: "Ubuntu 22.04, Java 17"
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: What you saw, including the exact text of any error message.
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open Settings, then the Lookup Tables tab
+        2. Click ...
+        3. ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Log excerpt
+      description: >-
+        The relevant lines of the engine log, with made-up values in place of anything sensitive. An error message
+        from an OP3C extension may show a reference: include it.
+      render: text
+
+  - type: checkboxes
+    id: confirmations
+    attributes:
+      label: Before you submit
+      options:
+        - label: >-
+            I removed all patient data, message content, license keys, credentials and internal host names from this
+            report, its logs and its screenshots.
+          required: true
+        - label: I searched the existing issues and did not find this one.
+          required: true
